@@ -55,7 +55,7 @@ data "aws_subnet" "name" {
 
 resource "aws_instance" "myserver" {
   ami             = "ami-01b1be742d950fb7f"
-  instance_type   = "t3.nano"
+  instance_type   = "t2.micro"
   subnet_id       = data.aws_subnet.name.id
   security_groups = [data.aws_security_group.name.id]
 
